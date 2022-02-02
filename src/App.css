@@ -30,6 +30,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 body{
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -46,13 +51,7 @@ button {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 800px) {
-  body {
-    display: unset;
-    padding-top: 0;
-  }
 
-}
 
 .count {
   display: flex;
@@ -83,4 +82,23 @@ img {
 
 .cloneNode.innerHTML{
   color: red;
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .calc {
+    max-height: 50vh !important;
+  }
+
+  body {
+    padding-top: 20px;
+  }
+
 }
