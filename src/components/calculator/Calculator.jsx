@@ -1,7 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-
+import React, { useRef, useEffect, useState, setState, useSelector } from 'react';
 import './calculator.css';
-
 import { btns, BTN_ACTIONS } from './btnConfig';
 
 const Calculator = () => {
@@ -11,21 +9,26 @@ const Calculator = () => {
 
     const [expression, setExpression] = useState('');
 
+
+
     useEffect(() => {
         const btns = Array.from(btnsRef.current.querySelectorAll('button'));
         btns.forEach(e => e.style.height = e.offsetWidth + 'px');
     }, []);
 
     const btnClick = (item) => {
+
         const curDiv = expRef.current;
+
 
         if (item.action === BTN_ACTIONS.THEME) document.body.classList.toggle('dark');
 
         if (item.action === BTN_ACTIONS.ADD) {
-            addAnimSpan(item.display);
 
+            addAnimSpan(item.display);
             const oper = item.display !== 'x' ? item.display : '*';
-            setExpression(expression + oper);
+
+            setExpression(expression + oper)
 
         }
 
@@ -36,10 +39,17 @@ const Calculator = () => {
             setExpression('');
         }
 
+        if (item.active && item.action === BTN_ACTIONS.ADD) {
+            return null;
+        }
+
+
         if (item.action === BTN_ACTIONS.CALC) {
             if (expression.trim().length <= 0) return;
 
+
             curDiv.parentNode.querySelector('div:last-child').remove();
+
 
             const cloneNode = curDiv.cloneNode(true);
             curDiv.parentNode.appendChild(cloneNode);
@@ -47,7 +57,7 @@ const Calculator = () => {
             const transform = `translateY(${-(curDiv.offsetHeight + 10) + 'px'}) scale(0.4)`;
 
             try {
-                let res = eval(expression);
+                let res = eval(expression)
 
                 setExpression(res.toString());
                 setTimeout(() => {
@@ -55,15 +65,28 @@ const Calculator = () => {
                     curDiv.innerHTML = '';
                     addAnimSpan(Math.floor(res * 100000000) / 100000000);
                 }, 200);
-            } catch {
+            } catch (error) {
                 setTimeout(() => {
                     cloneNode.style.transform = transform;
                     cloneNode.innerHTML = 'num num err';
-                }, 200);
+
+                }, 200
+
+
+
+
+              );
             } finally {
                 console.log('Count Calcula Done');
             }
         }
+
+
+
+
+
+
+
     }
 
     const addAnimSpan = (content) => {

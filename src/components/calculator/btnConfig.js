@@ -4,8 +4,11 @@ export const BTN_ACTIONS = {
     ADD: 'ADD',
     THEME: 'THEME',
     CALC: 'CALC',
-    DELETE: 'DELETE'
+    DELETE: 'DELETE',
+
 }
+
+
 
 export const btns = [
     {
@@ -16,17 +19,20 @@ export const btns = [
     {
         display: '(',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol'
     },
     {
         display: ')',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol'
     },
     {
         display: '/',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol'
     },
     {
         display: '7',
@@ -46,7 +52,8 @@ export const btns = [
     {
         display: 'x',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol'
     },
     {
         display: '4',
@@ -66,7 +73,8 @@ export const btns = [
     {
         display: '-',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol'
     },
     {
         display: '1',
@@ -86,7 +94,13 @@ export const btns = [
     {
         display: '+',
         action: BTN_ACTIONS.ADD,
-        class: 'btn__op'
+        class: 'btn__op',
+        active: 'symbol',
+        reducers: {
+          decrement: (state) => {
+            state.value -= 1;
+          }
+        }
     },
     {
         display: '🌜',
@@ -101,7 +115,8 @@ export const btns = [
     {
         display: '.',
         action: BTN_ACTIONS.ADD,
-        class: ''
+        class: '',
+        active: 'symbol'
     },
     {
         display: '=',
