@@ -3,6 +3,9 @@ This is a simple calculator built with React
 Deployed on Netlify
 https://count-calcula.netlify.app/
 
+<img width="302" alt="Screen Shot 2022-02-22 at 3 18 10 AM" src="https://user-images.githubusercontent.com/87626914/155122062-01ad557d-a3ed-4c52-9647-a9457ad834f3.png"><img width="298" alt="Screen Shot 2022-02-22 at 3 18 23 AM" src="https://user-images.githubusercontent.com/87626914/155121988-87811641-ed69-4b6e-b3aa-db8bcd0a2843.png">
+
+
 ## User Stories
 1. User should be able to add, multiply, subtract, and divide numbers
 2. User should be able to toggle between light and dark mode
