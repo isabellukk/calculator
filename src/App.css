@@ -1,25 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
-
 :root {
   --body-bg: #f5f5f5;
-
   --txt-color: #3c5763;
   --txt-white: #fff;
   --calc-res-color: #2f2d2f;
   --calc-btn-color: #d400ff;
-  --calc-bg: #fff;
+  --calc-bg: rgba(238,231,225,0.9);
 }
 
 .dark {
   --calc-res-color: #fff;
-  --calc-bg: #373737;
+  --calc-bg: rgba(55,55,55,0.95);
   --body-bg: #728791;
   --txt-color: #e6a567;
 }
+.dark::hover {
+  --txt-color: #f0b37a;
+}
 
 .dark .count {
-  color: #efe6dd;
+  color: #e6a567;
 }
 
 
@@ -35,6 +36,8 @@
 a {
   color: inherit;
   text-decoration: inherit;
+  font-family: 'Silkscreen', cursive;
+
 }
 
 body{
@@ -46,7 +49,6 @@ body{
   display: flex;
   justify-content: center;
   padding-top: 60px;
-
 }
 
 button {
@@ -80,11 +82,7 @@ img {
   padding: 0 !important;
 }
 
-.count a{
-  font-size: 1.8rem;
-  letter-spacing: 7px;
-  margin-top: 20px;
-}
+
 
 
 .cloneNode.innerHTML{
@@ -93,7 +91,7 @@ img {
 
 @media only screen and (max-width: 400px) {
   * {
-    /* font-size: 1.2rem; */
+    font-size: 1rem;
   }
 
 }
