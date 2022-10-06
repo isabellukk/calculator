@@ -1,7 +1,7 @@
 .calculator {
   padding: 20px;
-  height: 700px;
-  width: 400px;
+  height: 600px;
+  width: 350px;
   overflow: hidden;
   border-radius: 20px;
   background-color: var(--calc-bg);
@@ -14,7 +14,7 @@
 .calculator__btns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 2px;
 }
 
 .dark .calculator {
@@ -25,7 +25,7 @@
   border: 0;
   outline: 0;
   border-radius: 10px;
-  font-size: 1.55rem;
+  font-size: 1.2rem;
   font-weight: 800;
   background-color: transparent;
   color: var(--txt-color);
@@ -60,7 +60,7 @@
 }
 
 .calculator__btns button:last-child {
-  border-radius: 50%;
+  font-size: 2rem;
   color: var(--txt-white);
   background-image: linear-gradient(312deg, #cd6e36, #d400ff);
 }
@@ -80,7 +80,7 @@
 }
 
 .calculator__result__exp {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1;
   transform-origin: right bottom;
   transition: transform 0.3s ease;
@@ -100,7 +100,7 @@
 
 @media only screen and (max-width: 500px) {
   .count {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .calculator__btns button:active {
@@ -130,7 +130,6 @@
   .calculator {
     height: 520px;
     width: 320px;
-    overflow: hidden;
     border-radius: 10px;
     background-color: var(--calc-bg);
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
@@ -153,7 +152,7 @@
     border: 0;
     outline: 0;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 800;
     background-color: transparent;
     color: var(--txt-color);

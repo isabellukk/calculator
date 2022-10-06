@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
+
 :root {
   --body-bg: #f5f5f5;
+
   --txt-color: #3c5763;
   --txt-white: #fff;
   --calc-res-color: #2f2d2f;
@@ -44,6 +46,7 @@ body{
   display: flex;
   justify-content: center;
   padding-top: 60px;
+
 }
 
 button {
@@ -77,7 +80,11 @@ img {
   padding: 0 !important;
 }
 
-
+.count a{
+  font-size: 1.8rem;
+  letter-spacing: 7px;
+  margin-top: 20px;
+}
 
 
 .cloneNode.innerHTML{
@@ -86,7 +93,7 @@ img {
 
 @media only screen and (max-width: 400px) {
   * {
-    font-size: 1rem;
+    /* font-size: 1.2rem; */
   }
 
 }
