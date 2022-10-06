@@ -106,6 +106,7 @@ function Calculator() {
             {item.display}
           </button>
         ))}
+        <div className="button-glow"></div>
       </div>
     </div>
   );
