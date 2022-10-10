@@ -10,6 +10,7 @@ export const btns = [
     display: 'AC',
     action: BTN_ACTIONS.DELETE,
     class: 'btn__op',
+    active: 'page',
   },
   {
     display: '(',
@@ -29,6 +30,7 @@ export const btns = [
     class: 'btn__op',
     active: 'symbol',
   },
+
   {
     display: '7',
     action: BTN_ACTIONS.ADD,
@@ -50,6 +52,7 @@ export const btns = [
     class: 'btn__op',
     active: 'symbol',
   },
+
   {
     display: '4',
     action: BTN_ACTIONS.ADD,
@@ -71,6 +74,7 @@ export const btns = [
     class: 'btn__op',
     active: 'symbol',
   },
+
   {
     display: '1',
     action: BTN_ACTIONS.ADD,

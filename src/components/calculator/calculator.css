@@ -2,8 +2,8 @@
 .calculator {
   padding: 12%;
   padding-top: 35vh;
-  margin-top: vh;
   height: 65vh;
+  width: 27vw;
   overflow: hidden;
   border-radius: 20px;
   background-color: var(--calc-bg);
@@ -11,7 +11,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 30%;
+  
+  margin-bottom: 50%;
+}
+
+.calc-container {
+  display: flex;
+  justify-content: center;
+
 }
 
 .calculator__btns {
@@ -34,7 +41,17 @@
   background-color: transparent;
   color: var(--txt-color);
 }
+.dark .calculator__btns .btn__op {
 
+  color: #259a9a;
+}
+
+.calculator__btns button:active {
+  color: white;
+  box-shadow: rgba(255, 255, 255, 0.62) 0px 0px 10px 10px;
+
+
+}
 .calculator__btns button:active {
   color: white;
   box-shadow: rgba(255, 255, 255, 0.62) 0px 0px 10px 10px;
@@ -50,6 +67,10 @@
 
 }
 
+.dark .calculator__btns button:active {
+  box-shadow: rgba(245, 122, 247, 0.62) 0px 7px 29px 0px;
+
+}
 .calculator__btns button:hover {
   background-color: rgba(230, 165, 103, 0.15);
 }
@@ -112,7 +133,13 @@
 
 } */
 
+.calculator__btns .theme::active  {
+  box-shadow: rgba(250, 249, 247, 0.1) 20px 20px 30px 10px;
 
+}
+.calculator__btns:active  {
+
+}
 .calculator__result {
   position: relative;
   margin-bottom: 20px;
@@ -125,13 +152,17 @@
 
 .calculator__result__exp {
   font-size: 2rem;
+  min-width: 95vw;
   line-height: 1;
   transform-origin: right bottom;
   transition: transform 0.3s ease;
   color: var(--calc-res-color);
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
 }
 
+.calculator__btns .btn__op {
+  font-size: 1rem;
+}
 .calculator__result__exp:last-child {
   position: absolute;
   right: 0;
@@ -147,6 +178,7 @@
   .count {
     font-size: 1.5rem;
   }
+
 
   .count a {
     font-size: 1.7rem;
@@ -176,11 +208,14 @@
   .dark .calculator__btns button:active {
     background-color: rgba(129, 123, 129, 0.95);
   }
-
+.count {
+  margin-top: 1vh;
+}
   .calculator {
+    margin-top: 1vh;
     height: 520px;
     width: 320px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: var(--calc-bg);
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
     display: flex;
@@ -244,7 +279,8 @@
 
   .calculator__btns .btn__op {
     color: var(--calc-btn-color);
-  }
+font-weight: 900; 
+ }
 
   .calculator__result {
     position: relative;
@@ -257,7 +293,8 @@
   }
 
   .calculator__result__exp {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 800;
     line-height: 1;
     transform-origin: right bottom;
     transition: transform 0.3s ease;

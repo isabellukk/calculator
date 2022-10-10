@@ -65,7 +65,7 @@ function Calculator() {
       } catch (error) {
         setTimeout(() => {
           cloneNode.style.transform = transform;
-          cloneNode.innerHTML = "num num err";
+          cloneNode.innerHTML = "Daddy Chill. What the hell is even that?";
         }, 200);
       } finally {
         console.log("Count Calcula Done");
@@ -91,6 +91,7 @@ function Calculator() {
   };
 
   return (
+    <div className="calc-container">
     <div className="calculator">
       <div className="calculator__result">
         <div ref={expRef} className="calculator__result__exp"></div>
@@ -108,6 +109,7 @@ function Calculator() {
         ))}
         <div className="button-glow"></div>
       </div>
+    </div>
     </div>
   );
 }
